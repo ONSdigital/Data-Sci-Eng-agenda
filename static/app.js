@@ -77,7 +77,17 @@ function renderSession(session) {
   room.textContent = session.roomName;
   const track = document.createElement("span");
   track.className = "track-tag";
-  track.textContent = session.track;
+  if (session.track === "Lightning talk") {
+    const desktopTrack = document.createElement("span");
+    desktopTrack.className = "track-label-desktop";
+    desktopTrack.textContent = session.track;
+    const mobileTrack = document.createElement("span");
+    mobileTrack.className = "track-label-mobile";
+    mobileTrack.textContent = "Lightning";
+    track.append(desktopTrack, mobileTrack);
+  } else {
+    track.textContent = session.track;
+  }
   meta.append(room, track);
 
   const title = document.createElement("h3");
