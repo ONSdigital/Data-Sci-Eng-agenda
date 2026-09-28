@@ -94,11 +94,14 @@ h2 { font-size: clamp(38px, 4vw, 52px); letter-spacing: -.04em; }
 .time-rail strong { color: var(--ink); font-size: 11px; }
 .time-rail span { margin-top: 5px; font-size: 9px; }
 .slot-grid { min-width: 0; padding: 12px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; border-top: 1px solid #e7e4dc; }
+.slot-grid.all-rooms-midday-talks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .slot-grid.single-slot { grid-template-columns: minmax(0, 1fr); }
 .session-wrap { min-width: 0; padding: 12px 0; border-top: 1px solid #e7e4dc; }
 .session-card { min-height: 114px; padding: 17px 17px 16px 19px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 14px; border: 1px solid transparent; border-radius: 5px; background: white; transition: border .2s, box-shadow .2s, transform .2s; }
 .slot-grid .session-card { min-height: 151px; padding: 13px 12px; grid-template-columns: minmax(0,1fr); align-content: space-between; gap: 12px; border: 1px solid #eeece5; }
 .slot-grid .session-card.break-card { min-height: 88px; grid-column: 1 / -1; align-content: center; }
+.slot-grid.all-rooms-break-and-lightning { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.slot-grid.all-rooms-break-and-lightning .session-card.break-card { grid-column: auto; }
 .slot-grid.single-slot .session-card { min-height: 112px; grid-template-columns: minmax(0,1fr) auto; align-content: center; }
 .session-card:hover { border-color: #e9e5dc; box-shadow: var(--shadow); transform: translateY(-1px); }
 .session-card.saved { border-color: #c8d7ca; background: #fcfefa; }
