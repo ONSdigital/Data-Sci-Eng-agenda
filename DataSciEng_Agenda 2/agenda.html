@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2ea">
+  <meta name="description" content="Explore the Data Sci-Eng 2026 agenda across three rooms at the Office for National Statistics.">
+  <title>Data Sci-Eng 2026 | Office for National Statistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Office for National Statistics — Data Sci-Eng">
+      <img class="ons-logo" src="https://cdn.ons.gov.uk/assets/images/ons-logo/v2/ons-logo.svg" alt="Office for National Statistics">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="event-brand">Data Sci-Eng<small>Data science &amp; engineering event</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#agenda">Agenda</a>
+      <a class="nav-link" href="#about">The event</a>
+    </nav>
+    <a class="button button-dark top-cta" href="#agenda">Explore the agenda <i data-lucide="arrow-down-right"></i></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="about" aria-labelledby="eventTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> One day for curious data people</p>
+          <h1 id="eventTitle">Data tells<br>better stories <em>together.</em></h1>
+          <p class="hero-description">A full day of useful ideas, honest conversations, and hands-on learning across the world of data science.</p>
+        <div class="event-facts">
+            <div class="fact"><span class="fact-icon"><i data-lucide="calendar-days"></i></span><span><strong>Wednesday, October 28, 2026</strong><small>Programme 9:00 AM–4:00 PM</small></span></div>
+            <div class="fact"><span class="fact-icon"><i data-lucide="map-pin"></i></span><span><strong>Office for National Statistics</strong><small>Newport, Wales · 3 rooms</small></span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Abstract illustration of a sun over a landscape">
+        <div class="art-sun"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-hill hill-back"></div><div class="art-hill hill-front"></div>
+        <span class="art-caption">Find the signal.<br>Share the story.</span>
+        <span class="art-stamp">D<br><small>26</small></span>
+      </div>
+    </section>
+
+    <section class="agenda-section" id="agenda" aria-labelledby="agendaTitle">
+      <div class="section-heading">
+        <div><p class="eyebrow">One day · three rooms</p><h2 id="agendaTitle">Event agenda</h2></div>
+        <p class="section-note">Three conversations at once.<br>Choose your room.</p>
+      </div>
+      <div class="agenda-toolbar">
+        <div class="agenda-date"><span class="date-icon"><i data-lucide="calendar-days"></i></span><span><strong>Wednesday, October 28</strong><small>9:00 AM – 4:00 PM</small></span></div>
+        <label class="search-box"><i data-lucide="search"></i><span class="sr-only">Search sessions</span><input id="searchInput" type="search" placeholder="Search sessions"></label>
+      </div>
+      <div class="track-filters" aria-label="Filter by session format">
+        <span class="filter-label">FORMAT</span>
+        <button class="track-chip active" type="button" data-track="all">All sessions</button>
+        <button class="track-chip" type="button" data-track="Keynote">Keynote</button>
+        <button class="track-chip" type="button" data-track="Talk">Talks</button>
+        <button class="track-chip" type="button" data-track="Lightning talk">Lightning talks</button>
+        <button class="track-chip" type="button" data-track="Break">Breaks</button>
+        <button class="track-chip" type="button" data-track="Poster">Posters</button>
+      </div>
+      <div class="room-filters" id="roomFilters" aria-label="Filter by room">
+        <span class="filter-label">ROOM</span>
+        <button class="room-chip active" type="button" data-room="all">All rooms</button>
+        <button class="room-chip" type="button" data-room="room-101"><span class="room-dot dot-main"></span>Room 101</button>
+        <button class="room-chip" type="button" data-room="room-102"><span class="room-dot dot-discovery"></span>Room 102</button>
+        <button class="room-chip" type="button" data-room="room-103"><span class="room-dot dot-studio"></span>Room 103</button>
+      </div>
+      <p class="demo-note"><i data-lucide="info"></i> The timetable lists sessions and speakers; presentation links can be added when available.</p>
+      <div class="agenda-layout">
+        <div class="schedule" id="schedule" aria-live="polite"></div>
+        <aside class="day-aside">
+          <div class="aside-top"><span class="aside-icon"><i data-lucide="sparkles"></i></span><span>PLAN YOUR DAY</span></div>
+          <h3>Follow your<br>curiosity.</h3>
+          <p>Browse the talks and lightning talks, or drop by the Room 103 poster stands, open all day.</p>
+          <div class="aside-divider"></div>
+          <div class="saved-summary"><span>YOUR SAVED SESSIONS</span><strong id="savedCount">0</strong></div>
+          <p class="saved-hint">Tap the bookmark on any session to keep it close.</p>
+          <a class="aside-link" href="#agenda">Back to the top <i data-lucide="arrow-up-right"></i></a>
+        </aside>
+      </div>
+    </section>
+    <footer class="footer"><a class="brand footer-brand" href="#top" aria-label="Office for National Statistics home"><img class="ons-logo" src="https://cdn.ons.gov.uk/assets/images/ons-logo/v2/ons-logo.svg" alt="Office for National Statistics"></a><p>Data Sci-Eng 2026 <span>Office for National Statistics</span></p><a href="#top" class="back-top">Back to top ↑</a></footer>
+  </main>
+</body>
+</html>
