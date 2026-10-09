@@ -100,8 +100,10 @@ h2 { font-size: clamp(38px, 4vw, 52px); letter-spacing: -.04em; }
 .session-card { min-height: 114px; padding: 17px 17px 16px 19px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 14px; border: 1px solid transparent; border-radius: 5px; background: white; transition: border .2s, box-shadow .2s, transform .2s; }
 .slot-grid .session-card { min-height: 151px; padding: 13px 12px; grid-template-columns: minmax(0,1fr); align-content: space-between; gap: 12px; border: 1px solid #eeece5; }
 .slot-grid .session-card.break-card { min-height: 88px; grid-column: 1 / -1; align-content: center; }
-.slot-grid.all-rooms-break-and-lightning { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.slot-grid.all-rooms-break-and-lightning .session-card.break-card { grid-column: auto; }
+.slot-grid.all-rooms-breaks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.slot-grid.single-slot.all-rooms-breaks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.slot-grid.all-rooms-breaks .session-card.break-card { grid-column: 1 / -1; }
+.slot-grid.single-slot.all-rooms-breaks .session-card.break-card { grid-column: 1 / span 2; }
 .slot-grid.single-slot .session-card { min-height: 112px; grid-template-columns: minmax(0,1fr) auto; align-content: center; }
 .session-card:hover { border-color: #e9e5dc; box-shadow: var(--shadow); transform: translateY(-1px); }
 .session-card.saved { border-color: #c8d7ca; background: #fcfefa; }
@@ -227,13 +229,15 @@ h1 em { color: #d4e39b; font-weight: 700; }
 .all-day-session .session-card { min-height: 88px; grid-template-columns: minmax(0, 1fr); align-content: center; }
 .slot-grid.all-rooms-afternoon { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(76px, auto)); }
 .slot-grid.all-rooms-afternoon .session-card { min-height: 0; padding: 9px 10px; align-content: center; gap: 5px; }
+.slot-grid.all-rooms-afternoon .session-card.break-card { grid-column: auto; }
 .slot-grid.all-rooms-afternoon .guest-speaker-long { grid-row: 1 / span 4; }
 .slot-grid.all-rooms-late-afternoon { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(76px, auto)); }
 .slot-grid.all-rooms-late-afternoon .session-card { min-height: 0; padding: 9px 10px; align-content: center; gap: 5px; }
 .slot-grid.all-rooms-late-afternoon .iabs-session-long { grid-row: 1 / span 2; }
-.slot-grid.all-rooms-final-talks { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(76px, auto)); }
+.slot-grid.all-rooms-final-talks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .slot-grid.all-rooms-final-talks .session-card { min-height: 0; padding: 9px 10px; align-content: center; gap: 5px; }
-.slot-grid.all-rooms-final-talks .bad-requirements-long { grid-row: 1 / span 2; }
+.slot-grid.expanded-dan-talks { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(76px, auto)); }
+.slot-grid.expanded-dan-talks .dan-shiloh-long { grid-row: 1 / span 2; }
 .session-card.break-card { background: #f9f9f9; }
 @media (max-width: 430px) { .ons-logo { width: 150px; }.brand { gap: 10px; }.brand-divider { height: 36px; }.event-brand { font-size: 13px; }.event-brand small { max-width: 110px; font-size: 9px; line-height: 1.25; } }
 @media (max-width: 700px) { .all-day-session { grid-template-columns: 60px minmax(0, 1fr); } }
